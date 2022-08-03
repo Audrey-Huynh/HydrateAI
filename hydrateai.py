@@ -60,7 +60,7 @@ except:
 net = jetson.inference.detectNet('ssd-mobilenet-v2',threshold=0.7)
 
 # create video sources
-input = jetson.utils.videoSource(opt.input_URI, argv=sys.argv)
+input = jetson.utils.videoSource('/dev/video0')
 
 
 # process frames until the user exits
