@@ -75,10 +75,10 @@ while True:
 	print("detected {:d} objects in image".format(len(detections)))
 
 	for detection in detections:
-		#print(detection) #edit
-		if detection == class('person'): #edit
-			if not detection == class('bottle'): #edit
-				print("drink water") #edit
+		#print(detection)
+		if detection == class('person'):
+			if not detection == class('bottle'):
+				print("drink water")
       
 
 	# render the image
