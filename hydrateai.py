@@ -54,10 +54,10 @@ except:
 	sys.exit(0)
 
 # create video output object 
-output = jetson.utils.videoOutput(opt.output_URI, argv=sys.argv+is_headless)
+#output = jetson.utils.videoOutput('file://video.mp4') # User can scp this to their host device if they want to view the video
 	
 # load the object detection network
-net = jetson.inference.detectNet(opt.network, sys.argv, opt.threshold)
+net = jetson.inference.detectNet('ssd-mobilenet-v2',threshold=0.7)
 
 # create video sources
 input = jetson.utils.videoSource(opt.input_URI, argv=sys.argv)
