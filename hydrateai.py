@@ -76,9 +76,9 @@ while True:
 
 	for detection in detections:
 		#print(detection) #edit
-    if detection == class('person'): #edit
-      if not detection == class('bottle'): #edit
-        print("drink water") #edit
+		if detection == class('person'): #edit
+			if not detection == class('bottle'): #edit
+				print("drink water") #edit
       
 
 	# render the image
